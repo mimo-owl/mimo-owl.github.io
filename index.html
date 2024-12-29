@@ -1,0 +1,584 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Mimo Shirasaka</title>
+
+    <meta name="author" content="Mimo Shirasaka">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    
+  </head>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Mimo Shirasaka
+                </p>
+                <p>I'm a third-year undergraduate student at <a href="https://www.u-tokyo.ac.jp/en/about/about.html/">The University of Tokyo</a>.
+                </p>
+                <p style="text-align:center">
+                  <a href="m-shirasaka@g.ecc.u-tokyo.ac.jp">Email</a> &nbsp;/&nbsp;
+                </p>
+              </td>
+              <td style="padding:2.5%;width:37%;max-width:37%">
+                <a href="images/mimoshirasaka.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/mimoshirasaka.jpg" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Research</h2>
+                <p>
+                  <!-- I'm interested in computer vision, deep learning, generative AI, and image processing. Most of my research is about inferring the physical world (shape, motion, color, light, etc) from images, usually with radiance fields. Some papers are <span class="highlight">highlighted</span>. -->
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+           
+          <!-- Self-Rocovery -->
+          <tr onmouseout="selfrecovery_stop()" onmouseover="selfrecovery_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='selfrecovery'>
+                  <img src="images/selfrecovery.jpg" width=100%/>
+                </div>
+                <video  width=100% height=100% muted autoplay loop id="selfrecovery">
+                  <source src="images/selfrecovery.jpg" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function selfrecovery_start() {
+                  document.getElementById('selfrecovery').style.opacity = "1";
+                }
+
+                function selfrecovery_stop() {
+                  document.getElementById('selfrecovery').style.opacity = "0";
+                }
+                selfrecovery_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <!-- TITLE -->
+              <papertitle>Self-Recovery Prompting: Promptable General Purpose Service Robot System with Foundation Models and Self-Recovery</papertitle>
+              <br>
+              <!-- AUTHORS -->
+              <b>Mimo Shirasaka</b>, Tatsuya Matsushima, Soshi Tsunashima, Yuya Ikeda, Aoi Horo, So Ikoma, Chikaha Tsuji, Hikaru Wada, Tsunekazu Omija, Dai Komukai, Yutaka Matsuo, and Yusuke Iwasawa
+              <br>
+              <!-- CONFERENCE -->
+              <em>ICRA</em> 2024 <b>Oral, Poster, Demo</b>
+              <!-- LINKS -->
+              <br>
+              <a href="https://arxiv.org/abs/2309.14425">arXiv</a> / <a href="https://sites.google.com/view/srgpsr">Website</a>
+              <p></p>
+              <!-- SUMMARY -->
+              The self-recovery pipeline's automatic prompt updates enable failure recovery and task completion in general-purpose home robot tasks.
+               
+            </td>
+          </tr>
+           
+           
+
+
+    <!-- <tr onmouseout="cat4d_stop()" onmouseover="cat4d_start()" bgcolor="#ffffd0">
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='cat4d_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/cat4d.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/cat4d.jpg' width="160">
+        </div>
+        <script type="text/javascript">
+          function cat4d_start() {
+            document.getElementById('cat4d_image').style.opacity = "1";
+          }
+
+          function cat4d_stop() {
+            document.getElementById('cat4d_image').style.opacity = "0";
+          }
+          cat4d_stop()
+        </script>
+      </td>
+      <td style="padding:8px;width:80%;vertical-align:middle">
+        <a href="https://cat-4d.github.io/">
+			<span class="papertitle">CAT4D: Create Anything in 4D with Multi-View Video Diffusion Models
+</span>
+        </a>
+        <br>
+				<a href="https://www.cs.columbia.edu/~rundi/">Rundi Wu</a>,
+				<a href="https://ruiqigao.github.io/">Ruiqi Gao</a>,
+				<a href="https://poolio.github.io/">Ben Poole</a>,
+				<a href="https://alextrevithick.github.io/">Alex Trevithick</a>,
+				<a href="https://www.cs.columbia.edu/~cxz/index.htm/">Changxi Zheng</a>,
+				<strong>Jonathan T. Barron</strong>,
+				<a href="https://holynski.org/">Aleksander Holynski</a>
+        <br>
+        <em>arXiv</em>, 2024
+        <br>
+        <a href="https://cat-4d.github.io/">project page</a>
+        /
+        <a href="https://arxiv.org/abs/2411.18613">arXiv</a>
+        <p></p>
+        <p>
+				An approach for turning a video into a 4D radiance field that can be rendered in real-time. When combined with a text-to-video model, this enables text-to-4D.
+        </p>
+      </td>
+    </tr>
+
+
+    <tr onmouseout="ever_stop()" onmouseover="ever_start()">
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='ever_image'>
+					  <img src='images/ever_after.png' width=100%>
+					</div>
+          <img src='images/ever_before.png' width=100%>
+        </div>
+        <script type="text/javascript">
+          function ever_start() {
+            document.getElementById('ever_image').style.opacity = "1";
+          }
+
+          function ever_stop() {
+            document.getElementById('ever_image').style.opacity = "0";
+          }
+          ever_stop()
+        </script>
+      </td>
+      <td style="padding:8px;width:80%;vertical-align:middle">
+        <a href="https://half-potato.gitlab.io/posts/ever/">
+			<span class="papertitle">EVER: Exact Volumetric Ellipsoid Rendering for Real-time View Synthesis
+</span>
+        </a>
+        <br>
+				<a href="https://half-potato.gitlab.io/">Alexander Mai</a>, 
+				<a href="https://phogzone.com/">Peter Hedman</a>,
+				<a href="https://grgkopanas.github.io/">George Kopanas</a>,
+        <a href="https://dorverbin.github.io/">Dor Verbin</a>,
+        <a href="https://scholar.google.com/citations?user=ozNFrecAAAAJ&hl=en">David Futschik</a>,
+        <a href="https://xharlie.github.io/">Qiangeng Xu</a>,
+        <a href="https://jacobsschool.ucsd.edu/faculty/profile?id=253">Falko Kuester</a>,
+				<strong>Jonathan T. Barron</strong>,
+        <a href="https://www.zhangyinda.com/">Yinda Zhang</a>
+				<br>
+        <em>arXiv</em>, 2024
+        <br>
+        <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
+        /
+        <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
+        <p></p>
+        <p>
+				Raytracing constant-density ellipsoids yields more accurate and flexible radiance fields than splatting Gaussians, and still runs in real-time.
+        </p>
+      </td>
+    </tr>
+
+
+    <tr onmouseout="cat3d_stop()" onmouseover="cat3d_start()" bgcolor="#ffffd0">
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='cat3d_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/cat3d.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/cat3d.jpg' width="160">
+        </div>
+        <script type="text/javascript">
+          function cat3d_start() {
+            document.getElementById('cat3d_image').style.opacity = "1";
+          }
+
+          function cat3d_stop() {
+            document.getElementById('cat3d_image').style.opacity = "0";
+          }
+          cat3d_stop()
+        </script>
+      </td>
+      <td style="padding:8px;width:80%;vertical-align:middle">
+        <a href="https://cat3d.github.io/">
+			<span class="papertitle">CAT3D: Create Anything in 3D with Multi-View Diffusion Models
+</span>
+        </a>
+        <br>
+				<a href="https://ruiqigao.github.io/">Ruiqi Gao</a>*,
+        <a href="https://holynski.org/">Aleksander Holynski</a>*, 
+        <a href="https://henzler.github.io/">Philipp Henzler</a>,
+        <a href="https://github.com/ArthurBrussee">Arthur Brussee</a>, 
+				<a href="http://ricardomartinbrualla.com/">Ricardo Martin Brualla</a>, 
+        <a href="https://pratulsrinivasan.github.io/">Pratul P. Srinivasan</a>,
+				<strong>Jonathan T. Barron</strong>,
+        <a href="https://poolio.github.io/">Ben Poole</a>*
+
+        <br>
+        <em>NeurIPS</em>, 2024 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
+        <br>
+        <a href="https://cat3d.github.io/">project page</a>
+        /
+        <a href="https://arxiv.org/abs/2405.10314">arXiv</a>
+        <p></p>
+        <p>
+				A single model built around diffusion and NeRF that does text-to-3D, image-to-3D, and few-view reconstruction, trains in 1 minute, and renders at 60FPS in a browser.
+        </p>
+      </td>
+    </tr> -->
+
+
+    <!-- <tr onmouseout="nerfcasting_stop()" onmouseover="nerfcasting_start()">
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='nerfcasting_image'><video  width=100% muted autoplay loop>
+          <source src="images/nerfcasting.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/nerfcasting.jpg' width=100%>
+        </div>
+        <script type="text/javascript">
+          function nerfcasting_start() {
+            document.getElementById('nerfcasting_image').style.opacity = "1";
+          }
+
+          function nerfcasting_stop() {
+            document.getElementById('nerfcasting_image').style.opacity = "0";
+          }
+          nerfcasting_stop()
+        </script>
+      </td>
+      <td style="padding:8px;width:80%;vertical-align:middle">
+        <a href="https://nerf-casting.github.io/">
+          <span class="papertitle">NeRF-Casting: Improved View-Dependent Appearance with Consistent Reflections</span>
+        </a>
+        <br>
+				
+        <a href="https://dorverbin.github.io/">Dor Verbin</a>,
+        <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>,
+				<a href="https://phogzone.com/">Peter Hedman</a>,
+				<a href="https://benattal.github.io/">Benjamin Attal</a>, <br>
+				<a href="https://bmild.github.io/">Ben Mildenhall</a>,
+				<a href="https://szeliski.org/RichardSzeliski.htm">Richard Szeliski</a>,
+				<strong>Jonathan T. Barron</strong>
+        <br>
+        <em>SIGGRAPH Asia</em>, 2024
+        <br>
+        <a href="https://nerf-casting.github.io/">project page</a>
+        /
+        <a href="https://arxiv.org/abs/2405.14871">arXiv</a>
+        <p></p>
+        <p>
+        Carefully casting reflection rays lets us synthesize photorealistic specularities in real-world scenes.
+        </p>
+      </td>
+    </tr>
+
+
+    <tr onmouseout="flash_cache_stop()" onmouseover="flash_cache_start()">
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='flash_cache_image'><video  width=100% muted autoplay loop>
+          <source src="images/flash_cache.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/flash_cache.jpg' width=100%>
+        </div>
+        <script type="text/javascript">
+          function flash_cache_start() {
+            document.getElementById('flash_cache_image').style.opacity = "1";
+          }
+
+          function flash_cache_stop() {
+            document.getElementById('flash_cache_image').style.opacity = "0";
+          }
+          flash_cache_stop()
+        </script>
+      </td>
+      <td style="padding:8px;width:80%;vertical-align:middle">
+        <a href="https://benattal.github.io/flash-cache/">
+          <span class="papertitle">Flash Cache: Reducing Bias in Radiance Cache Based Inverse Rendering</span>
+        </a>
+        <br>
+				<a href="https://benattal.github.io/">Benjamin Attal</a>,
+        <a href="https://dorverbin.github.io/">Dor Verbin</a>,
+        <a href="https://bmild.github.io/">Ben Mildenhall</a>,
+        <a href="https://phogzone.com/">Peter Hedman</a>, <br>
+				<strong>Jonathan T. Barron</strong>,
+        <a href="https://www.cs.cmu.edu/~motoole2/">Matthew O'Toole</a>,
+        <a href="https://pratulsrinivasan.github.io/">Pratul P. Srinivasan</a>
+        <br>
+        <em>ECCV</em>, 2024 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
+        <br>
+        <a href="https://benattal.github.io/flash-cache/">project page</a>
+        /
+        <a href="TODO">arXiv</a>
+        <p></p>
+        <p>
+          A more physically-accurate inverse rendering system based on radiance caching for recovering geometry, materials, and lighting from RGB images of an object or scene.
+        </p>
+      </td>
+    </tr>
+
+
+
+    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='nuvo_image'><video  width=100% muted autoplay loop>
+          <source src="images/nuvo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/nuvo.jpg' width=100%>
+        </div>
+        <script type="text/javascript">
+          function nuvo_start() {
+            document.getElementById('nuvo_image').style.opacity = "1";
+          }
+
+          function nuvo_stop() {
+            document.getElementById('nuvo_image').style.opacity = "0";
+          }
+          nuvo_stop()
+        </script>
+      </td>
+      <td style="padding:8px;width:80%;vertical-align:middle">
+        <a href="https://pratulsrinivasan.github.io/nuvo/">
+          <span class="papertitle">Nuvo: Neural UV Mapping for Unruly 3D Representations</span>
+        </a>
+        <br>
+        <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>,
+        <a href="http://stephangarbin.com/">Stephan J. Garbin</a>,
+        <a href="https://dorverbin.github.io/">Dor Verbin</a>,
+		<strong>Jonathan T. Barron</strong>,
+        <a href="https://bmild.github.io/">Ben Mildenhall</a>
+        <br>
+        <em>ECCV</em>, 2024
+        <br>
+        <a href="https://pratulsrinivasan.github.io/nuvo/">project page</a>
+        /
+        <a href="https://www.youtube.com/watch?v=hmJiOSTDQZI">video</a>
+        /
+        <a href="http://arxiv.org/abs/2312.05283">arXiv</a>
+        <p></p>
+        <p>
+        Neural fields let you recover editable UV mappings for the challenging geometries produced by NeRF-like models.
+        </p>
+      </td>
+    </tr> -->
+
+
+    <!-- <tr onmouseout="bog_stop()" onmouseover="bog_start()">
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='bog_image'><video  width=100% muted autoplay loop>
+          <source src="images/bog.jpg" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/bog.jpg' width=100%>
+        </div>
+        <script type="text/javascript">
+          function bog_start() {
+            document.getElementById('bog_image').style.opacity = "1";
+          }
+
+          function bog_stop() {
+            document.getElementById('bog_image').style.opacity = "0";
+          }
+          bog_stop()
+        </script>
+      </td>
+      <td style="padding:8px;width:80%;vertical-align:middle">
+        <a href="https://creiser.github.io/binary_opacity_grid/">
+          <span class="papertitle">Binary Opacity Grids: Capturing Fine Geometric Detail for Mesh-Based View Synthesis
+</span>
+        </a>
+        <br>
+				<a href="https://creiser.github.io/">Christian Reiser</a>,
+				<a href="http://stephangarbin.com/">Stephan J. Garbin</a>,
+				<a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>,
+				<a href="https://dorverbin.github.io/">Dor Verbin</a>,
+				<a href="https://szeliski.org/RichardSzeliski.htm">Richard Szeliski</a>,
+				<a href="https://bmild.github.io/">Ben Mildenhall</a>,
+				<strong>Jonathan T. Barron</strong>,
+				<a href="https://phogzone.com/">Peter Hedman</a>*,
+				<a href="https://www.cvlibs.net/">Andreas Geiger</a>*		
+        <br>
+        <em>SIGGRAPH</em>, 2024
+        <br>
+        <a href="https://creiser.github.io/binary_opacity_grid/">project page</a>
+        /
+        <a href="https://www.youtube.com/watch?v=2TPUmGRg8bM">video</a>
+        /
+        <a href="https://arxiv.org/abs/2402.12377">arXiv</a>
+        <p></p>
+        <p>
+        Applying anti-aliasing to a discrete opacity grid lets you render a hard representation into a soft image, and this enables highly-detailed mesh recovery.
+        </p>
+      </td>
+    </tr> -->
+
+
+          
+					<!-- <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
+            <tr>
+              <td>
+                <h2>Miscellanea</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            
+           
+            <tr>
+              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
+						     <div class="colored-box" style="background-color: #fcb97d;">
+								 <h2>Micropapers</h2>
+								 </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2112.11687">Squareplus: A Softplus-Like Algebraic Rectifier</a>
+                <br>
+                <a href="https://arxiv.org/abs/2010.09714">A Convenient Generalization of Schlick's Bias and Gain Functions</a>
+                <br>
+                <a href="https://arxiv.org/abs/1704.07483">Continuously Differentiable Exponential Linear Units</a>
+                <br>
+                <a href="https://jonbarron.info/data/cvpr2023_llm_workshop_annotated.pdf">Scholars & Big Models: How Can Academics Adapt?</a>
+              </td>
+            </tr> -->
+
+
+            <!-- <tr>
+              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
+						     <div class="colored-box" style="background-color: #aaba9e;">
+								 <h2>Recorded Talks</h2>
+								 </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:center">
+                <a href="https://www.youtube.com/watch?v=h9vq_65eDas">View Dependent Podcast, 2024</a>
+								<br>
+                <a href="https://www.youtube.com/watch?v=4tDhYsFuEqo">Bay Area Robotics Symposium, 2023
+</a>
+								<br>
+                <a href="https://youtu.be/TvWkwDYtBP4?t=7604">EGSR Keynote, 2021</a>
+								<br>
+								<a href="https://www.youtube.com/watch?v=nRyOzHpcr4Q">TUM AI Lecture Series, 2020</a>
+								<br>
+								<a href="https://www.youtube.com/watch?v=HfJpQCBTqZs">Vision & Graphics Seminar at MIT, 2020</a>
+              </td>
+            </tr> -->
+
+            <!-- <tr>
+              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
+						     <div class="colored-box" style="background-color: #c6b89e;">
+								 <h2>Academic Service</h2>
+								 </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:center">
+                <a href="https://cvpr.thecvf.com/Conferences/2025/Organizers">Area Chair, CVPR 2025</a>
+                <br>
+                <a href="https://cvpr.thecvf.com/Conferences/2024/Organizers">Area Chair, CVPR 2024</a>
+                <br>
+                <a href="https://cvpr2023.thecvf.com/Conferences/2023/Organizers">Demo Chair, CVPR 2023</a>
+                <br>
+                <a href="https://cvpr2022.thecvf.com/area-chairs">Area Chair, CVPR 2022</a>
+                <br>
+                <a href="http://cvpr2021.thecvf.com/area-chairs">Area Chair & Award Committee Member, CVPR 2021</a>
+                <br>
+                <a href="http://cvpr2019.thecvf.com/area_chairs">Area Chair, CVPR 2019</a>
+                <br>
+                <a href="http://cvpr2018.thecvf.com/organizers/area_chairs">Area Chair, CVPR 2018</a>
+              </td>
+            </tr> -->
+						
+						
+<!--            
+            <tr>
+              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
+						     <div class="colored-box" style="background-color: #edd892;">
+								 <h2>Teaching</h2>
+								 </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:center">
+                <a href="http://inst.eecs.berkeley.edu/~cs188/sp11/announcements.html">Graduate Student Instructor, CS188 Spring 2011</a>
+                <br>
+                <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor, CS188 Fall 2010</a>
+                <br>
+                <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd Edition</a>
+              </td>
+            </tr> -->
+            
+
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+            <tr>
+              <td>
+                <heading>Projects</heading>
+              </td>
+            </tr>
+          </tbody></table>
+          <table width="100%" align="center" border="0" cellpadding="0"><tbody>
+
+          <!-- NetBall -->
+            <tr>
+              <td style="padding:0px;width:40%;vertical-align:middle;text-align:center" >
+                <a href="images/netball.jpg"><img src="images/netball.jpg" alt="netball" height="210"></a>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+              <!-- TITLE -->
+              <projecttitle>NetBall: AI Robot System for Nature Preservation</projecttitle>
+              <br>
+              <!-- PRESENTED -->
+              <em>SXSW Creative Industries Expo</em> 2024 <b>Talk, Demo</b>
+              <!-- LINKS -->
+              <br>
+              <a href="https://sites.google.com/view/robotnetball">Website</a>
+              <p></p>
+              <!-- Short Description -->
+              Developed an original quadruped transformable robot from scratch in a team of four.
+              Contribution: <b>team lead</b>, project management, design, and image recognition
+              Tech (software): Python, YOLOv5
+              Tech (hardware): 3D printing, Raspberry Pi 4B etc.
+            </td>
+          </tr>
+
+          <!-- CADRobot -->
+          <tr>
+            <td style="padding:0px;width:40%;vertical-align:middle;text-align:center" >
+              <a href="images/cadrobot.png"><img src="images/cadrobot.png" alt="cadrobot" height="210"></a>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <!-- TITLE -->
+              <projecttitle>Designing a Humanoid Robot with 3D CAD</projecttitle>
+              <br>
+              <!-- Short Description -->
+              Designed and rendered a humanoid robot from scratch as the final project for a CAD class.
+              Technologies (software): 3DCAD (Fusion)
+            </td>
+          </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <p>
+                  Source code taken from <a href="https://jonbarron.info/">Jon Barron's site</a>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+
+
+
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
