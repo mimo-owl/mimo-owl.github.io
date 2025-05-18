@@ -140,9 +140,3 @@
       display: inline-block;
       border-radius: 10px;
   }
-
-  .container {
-    width: 70%;
-    max-width: 960px;
-    margin: 0 auto;
-  }
