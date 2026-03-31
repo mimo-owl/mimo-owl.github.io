@@ -109,6 +109,21 @@
     font-size: 32px;
   }
 
+  .intro-copy {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .intro-copy p {
+    margin: 0 0 1em;
+  }
+
+  .intro-copy p:last-child {
+    margin-bottom: 0;
+  }
+
   .one {
     width: 160px;
     height: 160px;
