@@ -124,6 +124,11 @@
     margin-bottom: 0;
   }
 
+  .intro-links {
+    margin-top: 20px;
+    text-align: center;
+  }
+
   .one {
     width: 160px;
     height: 160px;
