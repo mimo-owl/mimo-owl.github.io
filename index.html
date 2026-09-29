@@ -8,28 +8,84 @@
     <meta name="author" content="Mimo Shirasaka">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <script>
+      (function () {
+        var setting = null;
+        try { setting = localStorage.getItem('theme'); } catch (e) {}
+        if (setting !== 'light' && setting !== 'dark') setting = 'system';
+        var root = document.documentElement;
+        root.setAttribute('data-theme-setting', setting);
+        if (setting === 'system') {
+          root.removeAttribute('data-theme');
+        } else {
+          root.setAttribute('data-theme', setting);
+        }
+      })();
+    </script>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
   </head>
 
   <body>
+    <button class="theme-toggle" id="theme-toggle" type="button" title="Change theme" aria-label="Change theme">
+      <svg class="icon-system" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+        <path d="M12 8a4 4 0 0 0 0 8z" fill="currentColor" stroke="none"></path>
+      </svg>
+      <svg class="icon-light" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+      </svg>
+      <svg class="icon-dark" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
+      </svg>
+    </button>
     <table style="width:100%;max-width:950px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr style="padding:0px">
-              <td style="padding:0 32px 0 0;width:75%;vertical-align:middle; text-align:left;">
-                <p class="name" style="text-align:center;">
-                  Mimo Shirasaka
-                </p>
+              <td class="header-photo">
+                <a href="images/mimoshirasaka.jpg"><img alt="profile photo" src="images/mimoshirasaka.jpg"></a>
+              </td>
+              <td class="header-text">
+                <h1 class="name">Mimo Shirasaka</h1>
+                <p class="subtitle">PhD Student | AI &amp; Robotics</p>
                 <div class="intro-copy">
-                    <p>Hi! I am a master's student in the <a href="https://www.ut-vision.org/">Computer Vision Group</a> at The University of Tokyo, advised by <a href="https://sites.google.com/ut-vision.org/ysato/home">Prof. Yoichi Sato</a>. I am also a research engineer intern at <a href="https://www.airoa.org/">AIRoA</a>.</p>
+                  <p>
+                    I'm a DPhil student in Engineering Science at the
+                    <a href="https://www.ox.ac.uk/">University of Oxford</a>,
+                    advised by
+                    <a href="https://eng.ox.ac.uk/people/ingmar-posner">Prof. Ingmar Posner</a>
+                    at the
+                    <a href="https://ori.ox.ac.uk/groups/a2i">Applied Artificial Intelligence Lab</a>
+                    in the Oxford Robotics Institute.
+                  </p>
 
-                    <p>I received my bachelor's degree in engineering from UTokyo in March 2026, where I was advised by <a href="https://researchmap.jp/ota_jun_65?lang=en">Prof. Jun Ota</a>. During my undergraduate studies, I interned at the Tokyo Robotics and AI Lab (TRAIL) as a research assistant, advised by <a href="https://www.linkedin.com/in/tatsuya-matsushima/?locale=ja">Dr. Tatsuya Matsushima</a>. I also interned at OMRON SINIC X as a researcher and at Mercari as an ML engineer.</p>
+                  <p>
+                    I received my B.E. from the
+                    <a href="https://www.u-tokyo.ac.jp/en/">University of Tokyo (UTokyo)</a>
+                    in March 2026, where I was advised by
+                    <a href="https://otalab.race.t.u-tokyo.ac.jp/en/jun-ota/">Prof. Jun Ota</a>.
+                    I also work closely with
+                    <a href="https://sites.google.com/ut-vision.org/ysato/home">Prof. Yoichi Sato</a>
+                    in the
+                    <a href="https://www.ut-vision.org/">Computer Vision Group</a>
+                    at UTokyo, and have been fortunate to be mentored by
+                    <a href="https://talkingtorobots.com/yonatanbisk.html">Prof. Yonatan Bisk</a>
+                    at Carnegie Mellon University.
+                  </p>
 
-                    <p>I am working closely with <a href="https://talkingtorobots.com/yonatanbisk.html">Prof. Yonatan Bisk</a> at Carnegie Mellon University.</p>
-
-                    <p>Before joining UTokyo, I worked with <a href="https://user.keio.ac.jp/~nori/title-eg-k.htm">Prof. Norihiko Sugimoto</a> on the atmosphere of Venus as a high school research scholar in the <a href="https://www.jst.go.jp/cpse/gsc/about/images/flyer_aboutgsc2024.pdf">JST Global Science Campus Program</a>.</p>
+                  <p>
+                    Previously, I was a research engineer intern at
+                    <a href="https://www.airoa.org/">AIRoA</a>,
+                    mentored by <a href="https://keiohta.github.io/">Kei Ota</a> and <a href="https://tkhkaeio.github.io/">Take Ohkawa</a>.
+                    I was also a research assistant at TRAIL, UTokyo, advised by
+                    <a href="https://t-matsushima.com/">Tatsuya Matsushima</a>,
+                    a research intern at
+                    <a href="https://www.omron.com/sinicx/en/">OMRON SINIC X</a>,
+                    and an ML engineer intern at Mercari.
                   </p>
                 </div>
                 <p class="intro-links">
@@ -40,63 +96,68 @@
                   <a href="https://www.linkedin.com/in/mimo-shirasaka-1001a929a/">LinkedIn</a>
                 </p>
               </td>
-              <td style="padding:0 0 0 32px;width:50%;max-width:50%;text-align:right;vertical-align:middle;">
-                <a href="images/mimoshirasaka.jpg"><img style="width:80%;max-width:80%" alt="profile photo" src="images/mimoshirasaka.jpg" class="hoverZoomLink"></a>
-              </td>
             </tr>
           </tbody></table>
 
     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:32px auto 0;"><tbody>
-      <tr>
+      <tr class="logo-row">
+        <!-- Oxford -->
+        <td width="14%" align="center">
+          <div class="logo-box"><img src="images/logos/uoxford_logo.png"></div>
+          <figcaption>
+            DPhil Oct'26-
+          </figcaption>
+        </td>
+
         <!-- AIRoA -->
-        <td width="16%" align="center">
-          <img src="images/logos/airoa_logo.png" width="120"><br>
-          <figcaption style="height:2em; line-height:1.2;">
-            Research Engineer Intern May'26-
+        <td width="14%" align="center">
+          <div class="logo-box"><img src="images/logos/airoa_logo.png"></div>
+          <figcaption>
+            Research Engineer Intern May'26-Sep'26
           </figcaption>
           <!-- <figcaption>Undergrad Apr'22-present</figcaption> -->
         </td>
 
         <!-- CMU -->
-        <td width="16%" align="center">
-          <img src="images/logos/cmu_logo.jpg" width="120"><br>
-          <figcaption style="height:2em; line-height:1.2;">
+        <td width="14%" align="center">
+          <div class="logo-box"><img src="images/logos/cmu_logo.jpg"></div>
+          <figcaption>
             Research Intern (remote) Mar'25-May'26
           </figcaption>
           <!-- <figcaption>Undergrad Apr'22-present</figcaption> -->
         </td>
 
         <!-- UTokyo -->
-        <td width="16%" align="center">
-          <img src="images/logos/utokyo_logoA.png" width="120"><br>
-          <figcaption style="height:2em; line-height:1.2;">
+        <td width="14%" align="center">
+          <div class="logo-box"><img src="images/logos/utokyo_logoA.png"></div>
+          <figcaption>
             Undergrad Apr'22-Mar'26
           </figcaption>
           <!-- <figcaption>Undergrad Apr'22-present</figcaption> -->
         </td>
 
         <!-- Google -->
-        <td width="16%" align="center">
-          <img src="images/logos/google_logo.png" width="110"><br>
-          <figcaption style="height:2em; line-height:1.2;">
+        <td width="14%" align="center">
+          <div class="logo-box"><img src="images/logos/google_logo.png"></div>
+          <figcaption>
             STEP '25
           </figcaption>
           <!-- <figcaption>STEP '25</figcaption> -->
         </td>
 
         <!-- Mercari -->
-        <td width="16%" align="center">
-          <img src="images/logos/mercari_logo.png" width="110"><br>
-          <figcaption style="height:2em; line-height:1.2;">
-            Build@Mercari '25<br>ML Engineer Intern '25
+        <td width="14%" align="center">
+          <div class="logo-box"><img src="images/logos/mercari_logo.png"></div>
+          <figcaption>
+            ML Engineer Intern '25
           </figcaption>
           <!-- <figcaption> Build@Mercari '25</figcaption> -->
         </td>
 
         <!-- OMRON SINIC X -->
-        <td width="16%" align="center">
-          <img src="images/logos/omron_logo.png" width="110"><br>
-          <figcaption style="height:2em; line-height:1.2;">
+        <td width="14%" align="center">
+          <div class="logo-box"><img src="images/logos/omron_logo.png"></div>
+          <figcaption>
             Research Intern '24-'25
           </figcaption>
           <!-- <figcaption>Research Intern '24-'25</figcaption> -->
@@ -110,26 +171,44 @@
         <tr>
         <td style="padding:16px 16px 8px 16px;width:100%;vertical-align:middle;text-align:left;">
           <br>
-          <hr style="width:100%; margin:40px auto; border:1px solid #ccc;">
+          <hr class="divider">
           <h2><b>News</b></h2>
-          <p>
-            <b>[Aug 2026]</b> Paper "Contextual Observer Grounding" got accepted to EMNLP 2026 Findings!<br>
-            <b>[May 2026]</b> Started a research engineer internship at AIRoA.<br>
-            <b>[Apr 2026]</b> Joined Computer Vision Group at UTokyo.<br>
-            <b>[Mar 2026]</b> Obtained BEng with Dean's Award (Faculty of Engineering) from UTokyo!<br>
-            <b>[Mar 2026]</b> Received Hatakeyama Award from The Japan Society of Mechanical Engineers!<br>
-            <b>[Feb 2026]</b> Paper "INSIGHT" got accepted to Augmented Humans 2026.<br>
-            <b>[Jan 2026]</b> Paper "Compliance-enabled Failure Recovery" got accepted to ICRA 2026!<br>
-            <b>[Apr 2025]</b> Joined Ota Lab at UTokyo.<br>
-            <b>[Jul 2024]</b> Received Best Poster Award at RSS 2024 Workshop!<br>
-            <b>[Jul 2024]</b> Received Best Poster Award at RoboCup 2024!<br>
-            <b>[Jun 2024]</b> Paper "SPARK" got accepted to RSS 2024 Workshop.<br>
-            <b>[May 2024]</b> Received Outstanding Research Award from The Robotics Society of Japan!<br>
-            <b>[Jan 2024]</b> Paper "Self-recovery prompting" got accepted to ICRA 2024.<br>
-            <b>[Sep 2023]</b> Presented "Self-recovery prompting" at CoRL 2023.<br>
-            <b>[Aug 2023]</b> Started an research internship at TRAIL, UTokyo.<br>
-            
-          </p>
+          <details class="news-year" open>
+            <summary>2026</summary>
+            <p>
+              <b>[Oct 2026]</b> Started my DPhil at Oxford!<br>
+              <b>[Aug 2026]</b> Paper "Contextual Observer Grounding" got accepted to EMNLP 2026 Findings!<br>
+              <b>[May 2026]</b> Started a research engineer internship at AIRoA.<br>
+              <b>[Apr 2026]</b> Joined Computer Vision Group at UTokyo.<br>
+              <b>[Mar 2026]</b> Obtained BEng with Dean's Award (Faculty of Engineering) from UTokyo!<br>
+              <b>[Mar 2026]</b> Received Hatakeyama Award from The Japan Society of Mechanical Engineers!<br>
+              <b>[Feb 2026]</b> Paper "INSIGHT" got accepted to Augmented Humans 2026.<br>
+              <b>[Jan 2026]</b> Paper "Compliance-enabled Failure Recovery" got accepted to ICRA 2026!<br>
+            </p>
+          </details>
+          <details class="news-year">
+            <summary>2025</summary>
+            <p>
+              <b>[Apr 2025]</b> Joined Ota Lab at UTokyo.<br>
+            </p>
+          </details>
+          <details class="news-year">
+            <summary>2024</summary>
+            <p>
+              <b>[Jul 2024]</b> Received Best Poster Award at RSS 2024 Workshop!<br>
+              <b>[Jul 2024]</b> Received Best Poster Award at RoboCup 2024!<br>
+              <b>[Jun 2024]</b> Paper "SPARK" got accepted to RSS 2024 Workshop.<br>
+              <b>[May 2024]</b> Received Outstanding Research Award from The Robotics Society of Japan!<br>
+              <b>[Jan 2024]</b> Paper "Self-recovery prompting" got accepted to ICRA 2024.<br>
+            </p>
+          </details>
+          <details class="news-year">
+            <summary>2023</summary>
+            <p>
+              <b>[Sep 2023]</b> Presented "Self-recovery prompting" at CoRL 2023.<br>
+              <b>[Aug 2023]</b> Started a research internship at TRAIL, UTokyo.<br>
+            </p>
+          </details>
         </td>
       </tr>
     </tbody></table>
@@ -139,7 +218,7 @@
     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         <tr>
         <td style="padding:16px;width:100%;vertical-align:middle;text-align:left;">
-          <hr style="width:100%; margin:24px auto; border:1px solid #ccc;">
+          <hr class="divider">
           <h2><b>Research</b></h2>
           <p>
             <!-- I'm interested in computer vision, deep learning, generative AI, and image processing. Most of my research is about inferring the physical world (shape, motion, color, light, etc) from images, usually with radiance fields. Some papers are <span class="highlight">highlighted</span>. -->
@@ -718,7 +797,7 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:16px;width:100%;vertical-align:middle;text-align:left;">
-                <hr style="width:100%; margin:24px auto; border:1px solid #ccc;">
+                <hr class="divider">
                 <h2><b>Projects</b></h2>
                 <p>
                   <!-- I'm interested in computer vision, deep learning, generative AI, and image processing. Most of my research is about inferring the physical world (shape, motion, color, light, etc) from images, usually with radiance fields. Some papers are <span class="highlight">highlighted</span>. -->
@@ -899,5 +978,52 @@
         </td>
       </tr>
     </table>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var button = document.getElementById('theme-toggle');
+        function apply(setting) {
+          root.setAttribute('data-theme-setting', setting);
+          if (setting === 'system') {
+            root.removeAttribute('data-theme');
+          } else {
+            root.setAttribute('data-theme', setting);
+          }
+          try {
+            if (setting === 'system') localStorage.removeItem('theme');
+            else localStorage.setItem('theme', setting);
+          } catch (e) {}
+        }
+        button.addEventListener('click', function () {
+          var current = root.getAttribute('data-theme-setting') || 'system';
+          root.classList.add('theme-transition');
+          apply(current === 'system' ? 'light' : current === 'light' ? 'dark' : 'system');
+          setTimeout(function () { root.classList.remove('theme-transition'); }, 300);
+        });
+      })();
+
+      (function () {
+        var intro = document.querySelector('.intro-copy');
+        var photo = document.querySelector('.header-photo img');
+        if (!intro || !photo) return;
+        var narrow = window.matchMedia('(max-width: 640px)');
+        function fit() {
+          if (narrow.matches) {
+            photo.classList.remove('fit-intro');
+            photo.style.height = '';
+            return;
+          }
+          photo.classList.add('fit-intro');
+          photo.style.height = intro.getBoundingClientRect().height + 'px';
+        }
+        if ('ResizeObserver' in window) {
+          new ResizeObserver(fit).observe(intro);
+        } else {
+          window.addEventListener('resize', fit);
+        }
+        window.addEventListener('load', fit);
+        fit();
+      })();
+    </script>
   </body>
 </html>
